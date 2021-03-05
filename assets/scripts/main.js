@@ -20,10 +20,10 @@ function createsaleItem(product) {
   const listitem = `<li>
     <div class="product-container" >
               <img src="${product.picture}" class="li-image" />
+              <p id='product_name' class="item-name"><h3>${product.product_name}</h3></p>
               <div class="icon-overlay">
                <button class="info-btn"  onclick="info('show', ${product.id});">Info</button>
                 <p id='product_price'>R${product.price}</p>
-                <p id='product_name' class="item-name"><h3>${product.product_name}</h3></p>
                 <button class="addtocart-btn" onclick="addToCart(${product.id})">Buy &#43</button>
                 
               </div>
@@ -43,6 +43,10 @@ function removefromCart(id) {
   let total = parseInt(y) - parseInt(x);
 
   let alpha = `${parseInt(total) - parseInt(x)}`;
+  if (total <= -1) {
+    alert("Something went Wrong");
+    window.location.reload();
+  }
 
   recieptTotal.innerHTML = total;
   document.getElementById("product" + id).remove();
@@ -77,6 +81,10 @@ function addToCart(id) {
       .getAttribute("product-price");
     let total = parseInt(y) + parseInt(x);
     let alpha = `${parseInt(total) + parseInt(x)}`;
+
+    if (total <= 0) {
+      alert("Something went Wrong");
+    }
 
     recieptTotal.innerHTML = total;
     console.log(total);

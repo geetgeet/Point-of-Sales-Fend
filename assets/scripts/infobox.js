@@ -1,3 +1,13 @@
+// function myFunction(id) {
+//   var x = document.getElementById("infobox");
+//   if (x.style.display === "none") {
+//     x.style.display = "block";
+//     itemInfo(id);
+//   } else {
+//     x.style.display = "none";
+//   }
+// }
+
 function info(showhide, id) {
   if (showhide == "show") {
     document.getElementById("infobox").style.visibility = "visible";
@@ -11,10 +21,10 @@ function info(showhide, id) {
 
 function itemInfo(id) {
   let cart = document.getElementById("infobox");
-  let inCartItems = products.filter((product) => {
+  let block = products.filter((product) => {
     return product.id == id;
   });
-  let selectedItem = inCartItems[0];
+  let selectedItem = block[0];
   let cartItem = `
         <p class="rec-li" id="product${id}" product-price=${selectedItem.price}>
           ${selectedItem.product_name} : ${selectedItem.price}</p>
@@ -24,6 +34,6 @@ function itemInfo(id) {
           <p>Price:R${selectedItem.price}</p>
         <button onclick="info('hide')">Close</button>
       `;
-  cart.innerHTML += cartItem;
+  cart.innerHTML = cartItem;
   console.log(products);
 }
