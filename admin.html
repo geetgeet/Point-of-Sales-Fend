@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <!-- <link rel="stylesheet" href="./assets/styles/preloader.css" />-->
+    <link rel="stylesheet" href="./assets/styles/navigation.css" />
+    <!-- <link rel="stylesheet" href="./assets/styles/landing.css"-->
+    <!-- <link rel="stylesheet" href="./assets/styles/about.css" /> -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="assets/styles/admin.css">
+  </head>
+  <body>
+    <!-- Preloader <div class="preloader">
+      <div class="loader"></div>
+    </div> -->
+
+    <!-- Navigation Section -->
+    <nav class="navbar">
+      <img src="..." alt="Logo" class="logo" />
+      <ul class="nav-links" id="nav-links">
+        <li class="nav-link"><a href="./index.html">Home</a></li>
+        <li class="nav-link"><a href="#about">About</a></li>
+        <li class="nav-link"><a href="./blogs.html">All Products</a></li>
+      </ul>
+      <button class="hamburger" onclick="toggleNav()">Menu</button>
+    </nav>
+    <!-- Landing Page Section -->
+    
+    <section class="landing">
+
+    <h2 class="headings">All Items</h2>
+    <div class="admin-table">
+        <table class="items-table" id="table-items" >
+          <tr class="table-head">
+            <th>Product Id</th>
+            <th>Product (Name)</th>
+            <th>Price</th>
+            <th>Brand</th>
+            <th>Image Souce</th>
+          
+        <th>Delete</th>
+        <th>Edit</th></tr>
+            <tr >
+                <tr>
+                    <td>EXAMPLE</td>
+                    <td>${product.product_name}</td>
+                    <td>${product.price}</td>
+                    <td>${product.brand}</td>
+                    <td>${product.picture}</td>
+                <td><a href="https://shielded-woodland-34724.herokuapp.com/delete-item/<int:product_id>/">Delete</a> </td>
+                <td><a href="/edit-item/{{recors[0]}}">Edit</a></td>
+ </tr>
+
+            </tr>
+    </table>
+        <!--<div>
+        <h1>Items</h1>
+        <div>
+          <table class="items-table" id="table-items">
+            <tr>
+              <th>Product Id</th>
+              <th>Product (Name)</th>
+              <th>Price</th>
+              <th>Brand</th>
+              <th>Image Souce</th>
+            </tr>
+            <tr>
+              <td>${product.id}</td>
+              <td>${product.product_name}</td>
+              <td>${product.price}</td>
+              <td>${product.brand}</td>
+              <td>${product.picture}</td>
+            </tr>
+
+
+           <li>
+              <div class="product-container">
+                <img src="img_avatar.png" class="li-image" />
+                <div class="icon-overlay">
+                  <i class="fa fa-close"></i>
+                  <p>price</p>
+                  <p></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="product-container">
+                <img src="img_avatar.png" class="li-image" />
+                <div class="icon-overlay">
+                  <i class="fa fa-close"></i>
+                  <p>price</p>
+                  <p></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="product-container">
+                <img src="img_avatar.png" class="li-image" />
+                <div class="icon-overlay">
+                  <i class="fa fa-close"></i>
+                  <p>price</p>
+                  <p></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="product-container">
+                <img src="img_avatar.png" class="li-image" />
+                <div class="icon-overlay">
+                  <i class="fa fa-close"></i>
+                  <p>price</p>
+                  <p></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="product-container">
+                <img src="img_avatar.png" class="li-image" />
+                <div class="icon-overlay">
+                  <i class="fa fa-close"></i>
+                  <p>price</p>
+                  <p></p>
+                </div>
+              </div>
+            </li>
+           -->
+          </table>
+        </div>
+
+       
+        <div class="control-panel">
+          <h1 class="headings">Control Panel</h1>
+          <button
+            class="control-btn"
+            onclick="window.location.href='add-item.html'"
+          >
+            Add new Item
+          </button>
+          <button
+            href="admin.html"
+            target="blank"
+            class="control-btn"
+            onclick="window.location.href='index.html'"
+          >
+            Back to items
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Script Imports -->
+    <script src="./assets/scripts/navigation.js"></script>
+    <script src="assets/scripts/admin.js"></script>
+  </body>
+  
+</html>
+<script>
+//   /* -- FETCH FUNCRIONS--*/
+//   function getPosts() {
+//     // Get element to change
+
+//     // Fetch the data
+//     fetch("http://127.0.0.1:5000/show-records/")
+//       .then((response) => response.json())
+//       .then((json) => {
+//         console.log(json);
+//         json.forEach((item) => createtr(item));
+//       });
+//   }
+
+//   function createtr(product) {
+//     const tableitem = ` <tr data-id=${ product.id }>
+//                 <td>${product.id}</td>
+//                 <td><input name="product_name" type='text' value="${product.product_name}" ></td>
+//                 <td><input name="price" type='text' value="${product.price}" placeholder="Currently:R${product.price}"></td>
+//                 <td><input name="brand" type='text' value="${product.brand}"></td>
+//                 <td><input name="picture" type='text' value="${product.picture}"></td>
+//                 <td><button type="button" onclick="deleteValues(${ product.id })">Delete</button> </td>
+//                 <td><button type="button" onclick="editValues(${ product.id })">Edit</button></td>
+//             </tr>`;
+//     let list = document.getElementById("table-items");
+//     console.log("Hello");
+//     list.innerHTML += tableitem;
+//   }
+
+//   getPosts();
+//   function admin() {}
+
+//   function deleteValues(id){
+    
+//     if (confirm('Are you sure you want to DELETE item from database?')) {
+
+//   fetch(`http://127.0.0.1:5000/delete-item/${ id }/`, {method: "DELETE"})
+//      console.log(id);
+// } else {
+//   alert("cancel")
+
+//   console.log('Thing was not saved to the database.');
+// }
+    
+//     // let item = document.querySelector(`[data-id="${ id }"]`);
+//     // console.log(item);
+//   }
+
+//   function editValues(id){
+
+//     fetch(`http://127.0.0.1:5000/edit-item/${ id }/`, {  mode: 'no-cors',method: "POST"})
+//     console.log(id);
+//   }
+</script>

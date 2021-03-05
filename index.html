@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <!-- <link rel="stylesheet" href="./assets/styles/preloader.css" />-->
+    <link rel="stylesheet" href="./assets/styles/navigation.css" />
+    <!-- <link rel="stylesheet" href="./assets/styles/landing.css"-->
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Pacifico&family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/styles/main.css" />
+  </head>
+  <body>
+    <!-- Preloader <div class="preloader">
+      <div class="loader"></div>
+    </div> -->
+
+    <!-- Navigation Section -->
+    <nav class="navbar">
+      <img src="..." alt="Logo" class="logo" />
+      <ul class="nav-links" id="nav-links">
+        <li class="nav-link"><a href="./index.html">Home</a></li>
+        <li class="nav-link"><a href="#about">About</a></li>
+        <li class="nav-link"><a href="#allproducts.html">All Products</a></li>
+      </ul>
+      <button class="hamburger" onclick="toggleNav()">Menu</button>
+    </nav>
+    <!-- Landing Page Section -->
+    <style>
+      /*  */
+    </style>
+    <section class="landing">
+      <div id="popupbox">
+        <form
+          name="login"
+          onsubmit="event.preventDefault();admin()"
+          id="logForm"
+        >
+          Username:
+          <input name="username" size="14" required />
+          <br />
+          Password:
+          <input name="password" type="password" size="14" required />
+          <button class="admin-btn" type="submit">login</button><br />
+          <a href="javascript:login('hide');">close</a>
+        </form>
+      </div>
+
+      <div id="infobox"></div>
+
+      <div>
+        <h1 class="headings">Items</h1>
+        <div>
+          <ul class="items-scroll" id="li-items">
+            <!-- <li>
+              <li>
+                <div class="product-container" >
+                          <img src="${product.picture}" class="li-image" />
+                          <div class="icon-overlay">
+                           <button class="show-info-btn" onclick="info('show', ${ product.id });">Info <i class="fa fa-info-circle"></i></button>
+                            <p id='product_price'>R${product.price}</p>
+                            <p id='product_name'><h3>${product.product_name}</h3></p>
+                            
+                            <button class="addtocart-btn" onclick="addToCart(${ product.id })">ADD TO CART</button>
+                            
+                          </div>
+                          
+                        </div></li>
+             
+            </li> -->
+            <!-- <li>
+              <div class="product-container">
+                <img src="img_avatar.png" class="li-image" />
+                <div class="icon-overlay">
+                  <i class="fa fa-close"></i>
+                  <p>price</p>
+                  <p></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="product-container">
+                <img src="img_avatar.png" class="li-image" />
+                <div class="icon-overlay">
+                  <i class="fa fa-close"></i>
+                  <p>price</p>
+                  <p></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="product-container">
+                <img src="img_avatar.png" class="li-image" />
+                <div class="icon-overlay">
+                  <i class="fa fa-close"></i>
+                  <p>price</p>
+                  <p></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="product-container">
+                <img src="img_avatar.png" class="li-image" />
+                <div class="icon-overlay">
+                  <i class="fa fa-close"></i>
+                  <p>price</p>
+                  <p></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="product-container">
+                <img src="img_avatar.png" class="li-image" />
+                <div class="icon-overlay">
+                  <i class="fa fa-close"></i>
+                  <p>price</p>
+                  <p></p>
+                </div>
+              </div>
+            </li>
+           -->
+          </ul>
+        </div>
+
+        <div class="reciept">
+          <div class="reciept-head">
+            <h3>Reciept</h3>
+            <h3>
+              Total:R
+              <p value="0" class="total-price">0</p>
+            </h3>
+          </div>
+          <ul class="reciept-items" id="cartList">
+            <li class="reciept-item">N/A</li>
+            <li
+              class="rec-li"
+              id="product${id}"
+              product-price="${"
+              selectedItem.price
+              }
+            >
+              ${ selectedItem.product_name } : ${ selectedItem.price }
+              <button onclick="removefromCart()">Remove</button>
+            </li>
+          </ul>
+        </div>
+        <div class="control-panel">
+          <h1 class="headings">ControlPanel</h1>
+          <button class="btn-check-out" onclick="checkOut()">Check out</button>
+          <button class="admin-btn" value="ADMIN">
+            <a href="javascript:login('show');">Admin-login</a>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Script Imports -->
+    <script src="./assets/scripts/navigation.js"></script>
+    <script src="./assets/scripts/main.js"></script>
+    <script src="./assets/scripts/checkout.js"></script>
+  </body>
+</html>
+<script>
+  // /* -- FETCH FUNCRIONS--*/
+  // let products = [];
+  // function getPosts() {
+  //   // Get element to change
+  //   let list = document.getElementById("li-items");
+
+  //   // Fetch the data
+  //   fetch("http://127.0.0.1:5000/show-records/")
+  //     .then((response) => response.json())
+  //     .then((json) => {
+  //       console.log(json);
+  //       json.forEach((item) => {
+  //         products.push(item);
+  //         createsaleItem(item);
+  //       });
+  //     });
+  // }
+
+  // function createsaleItem(product) {
+  //   const listitem = `<li>
+  //     <div class="product-container" >
+  //               <img src="${product.picture}" class="li-image" />
+  //               <div class="icon-overlay">
+  //                <button class="info-btn"  onclick="info('show', ${product.id});">Info</button>
+  //                 <p id='product_price'>R${product.price}</p>
+  //                 <p id='product_name' class="item-name"><h3>${product.product_name}</h3></p>
+
+  //                 <button class="addtocart-btn" onclick="addToCart(${product.id})">Buy &#43</button>
+
+  //               </div>
+
+  //             </div></li>`;
+  //   let list = document.getElementById("li-items");
+  //   console.log("Hello");
+  //   list.innerHTML += listitem;
+  // }
+
+  // getPosts();
+
+  // function removefromCart(id) {
+  //   let recieptTotal = document.getElementsByClassName("total-price")[0];
+  //   let y = parseInt(recieptTotal.innerHTML);
+  //   let x = document
+  //     .getElementById("product" + id)
+  //     .getAttribute("product-price");
+  //   let total = parseInt(y) - parseInt(x);
+
+  //   let alpha = `${parseInt(total) - parseInt(x)}`;
+
+  //   recieptTotal.innerHTML = total;
+  //   document.getElementById("product" + id).remove();
+  // }
+
+  // /* --ADMIN FUNCTION--*/
+  // function login(showhide) {
+  //   if (showhide == "show") {
+  //     document.getElementById("popupbox").style.visibility = "visible";
+  //   } else if (showhide == "hide") {
+  //     document.getElementById("popupbox").style.visibility = "hidden";
+  //   }
+  // }
+
+  // function addToCart(id) {
+  //   let cart = document.getElementById("cartList");
+  //   let inCartItems = products.filter((product) => product.id == id);
+  //   let selectedItem = inCartItems[0];
+  //   let cartItem = `
+  //       <li class="rec-li" id="product${id}" product-price=${selectedItem.price}>
+  //         ${selectedItem.product_name} : ${selectedItem.price}
+  //       <button onclick="removefromCart(${id})">Remove</button></li>
+  //     `;
+  //   cart.innerHTML += cartItem;
+  //   console.log(products);
+
+  //   function calcTotal(i, o) {
+  //     let recieptTotal = document.getElementsByClassName("total-price")[0];
+  //     let y = parseInt(recieptTotal.innerHTML);
+  //     let x = document
+  //       .getElementById("product" + id)
+  //       .getAttribute("product-price");
+  //     let total = parseInt(y) + parseInt(x);
+  //     let alpha = `${parseInt(total) + parseInt(x)}`;
+
+  //     recieptTotal.innerHTML = total;
+  //     console.log(total);
+  //   }
+
+  //   calcTotal();
+  // }
+
+  // function admin() {
+  //   let loginForm = document.getElementById("logForm");
+  //   let inputs = loginForm.getElementsByTagName("input");
+
+  //   let username = inputs[0].value;
+  //   let password = inputs[1].value;
+
+  //   let users;
+  //   fetch("https://shielded-woodland-34724.herokuapp.com/show-admin/")
+  //     .then((response) => response.json())
+  //     .then((json) => {
+  //       console.log(json);
+  //       user = json;
+  //       console.log(password, username, user);
+
+  //       let logged = user.filter((user) => {
+  //         return user.username == username && user.password == password;
+  //       });
+
+  //       if (logged.length >= 1) {
+  //         window.location.href = "./admin.html";
+  //       } else {
+  //         alert("Invalid");
+  //       }
+  //     });
+  // }
+
+  // function checkOut() {
+  //   let a = document.getElementsByClassName("total-price").innerHTML;
+  //   alert("Your total is", a);
+  // }
+</script>
+<script src="assets/scripts/infobox.js"></script>

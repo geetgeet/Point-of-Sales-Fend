@@ -1,0 +1,287 @@
+html {
+  height: 100vh;
+}
+body {
+  background-color: teal;
+}
+.landing {
+  max-height: 100vh;
+  max-width: 100vw;
+}
+
+#items {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.items-scroll #items ul {
+  height: 200px;
+  width: 18%;
+  list-style-type: none;
+}
+.items-scroll #items {
+  overflow: auto;
+  overflow-y: scroll;
+}
+/* .reciept {
+  background-color: tomato;
+
+} */
+.control-panel {
+  background-color: thistle;
+}
+
+html {
+  height: 100vh;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Varela Round", sans-serif;
+  /* font-family: 'Pacifico', cursive; */
+  font-family: "Do Hyeon", sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+.reciept {
+  float: right;
+  width: 30%;
+  height: 30vh; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+  overflow: auto;
+  font-size: x-large;
+}
+
+/* Style the list inside the menu */
+.reciept ul {
+  list-style-type: none;
+  padding: 0;
+}
+.items-scroll {
+  background-color: whitesmoke;
+  width: 100%;
+  height: 50vh;
+  overflow: auto;
+}
+#li-items {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  list-style-type: none;
+}
+.items-scroll #items ul {
+  height: 200px;
+  width: 18%;
+}
+.items-scroll #items {
+  overflow: auto;
+  overflow-y: scroll;
+}
+
+.control-panel {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 30vh; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+.product-container {
+  position: relative;
+  height: 200px;
+  max-width: 300px;
+  margin: 3px auto 3px;
+}
+
+.li-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.icon-overlay {
+  position: absolute;
+  top: 0;
+  /*background: rgb(0, 0, 0);
+background: rgba(0, 0, 0, 0.5);*/ /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s ease;
+  opacity: 1;
+  color: white;
+  font-size: 24px;
+  /*padding: 20px;*/
+  /*text-align: center;*/
+}
+
+.icon-overlay i {
+  position: absolute;
+  /*top: 8px;
+left: 16px;
+font-size: 18px;*/
+  background: rgb(0, 0, 0);
+  background: rgb(0, 0, 0, 0.5);
+}
+.icon-overlay p {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  /*font-size: 18px;*/
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
+}
+.li-image {
+  background-color: rgb(226, 226, 226);
+  height: 100%;
+  width: 100%;
+}
+.btn-check-out {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.btn-check-out:hover {
+  background-color: #3e8e41;
+}
+
+.btn-check-out:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.product-container {
+}
+
+#popupbox {
+  margin: 0;
+  margin-left: 40%;
+  margin-right: 40%;
+  margin-top: 50px;
+  padding-top: 10px;
+  width: 20%;
+  /* height: 150px; */
+  position: absolute;
+  background: #fbfbf0;
+  border: solid #000000 2px;
+  z-index: 9;
+  font-family: arial;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+}
+#logForm {
+  text-align: center;
+}
+.reciept-items {
+  padding: 5px;
+}
+.reciept-head {
+  display: flex;
+  justify-content: space-between;
+}
+.reciept .total-price {
+  overflow: auto;
+}
+.rec-li {
+  display: flex;
+  justify-content: space-between;
+}
+#infobox {
+  margin: 0;
+  margin-left: 40%;
+  margin-right: 40%;
+  margin-top: 50px;
+  padding-top: 10px;
+  width: 20%;
+  /* height: 150px; */
+  position: absolute;
+  background: #fbfbf0;
+  border: solid #000000 2px;
+  z-index: 9;
+  font-family: arial;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.addtocart-btn {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 15%;
+  font-size: x-large;
+
+  background-color: white;
+  color: black;
+  border: 2px solid #008cba;
+}
+.addtocart-btn:hover {
+  background-color: #008cba;
+  color: white;
+}
+.info-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  font-size: large;
+}
+.item-name {
+  font-family: "Varela Round", sans-serif;
+  font-family: "Varela Round", sans-serif;
+}
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  .reciept,
+  .scroll-items,
+  .control-panel {
+    width: 100%;
+    /*height: auto;*/
+  }
+  #li-items {
+    display: list-item;
+  }
+  #popupbox {
+    height: inherit;
+    width: inherit;
+    justify-content: center;
+  }
+  #logForm {
+    padding: 5px;
+  }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Add-To-Database</title>
+        <link rel="stylesheet" href="./assets/styles/navigation.css" />
+        <link rel="stylesheet" href="assets/styles/add-item.css">
+
+      </head>
+      
+      
+<body>
+      <style>
+        /* body{
+            background-color: teal;
+            ;
+        }
+        #create-form{
+        
+
+        }
+        .div-add-form{}
+        .landing{
+            height: 100vh;
+background-size: cover;
+background-position: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+        } */
+
+    </style>
+<!-- Navigation Section -->
+<nav class="navbar">
+    <img src="..." alt="Logo" class="logo" />
+    <ul class="nav-links" id="nav-links">
+      <li class="nav-link"><a href="./index.html">Home</a></li>
+      <li class="nav-link"><a href="#about">About</a></li>
+      <li class="nav-link"><a href="./blogs.html">All Products</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleNav()">Menu</button>
+  </nav>
+   <section class="landing">
+    <!-- <form id="create-form" action="https://shielded-woodland-34724.herokuapp.com/add-new-record/" method="POST"> -->
+        <div class="div-add-form">
+            <form 
+        id="create-form" onsubmit="event.preventDefault(); addItem()">
+        <h3 class="headings">Item Info</h3>
+        Name<br>
+        <input type="text" name="product_name" id="product" required><br>
+
+        Price<br>
+        <input type="text" name="price" id="product_price" required></input><br>
+
+        Brand<br>
+        <input type="text" name="brand" id="product_brand" required><br>
+
+        Image<br>
+        <input type="text" name="picture" id="product_image" required><br>
+        <button type="submit">Add Item</button>
+        <button
+            href="admin.html"
+            target="blank"
+            class="control-btn"
+            onclick="window.location.href='admin.html'"
+          >
+            Back to Admin
+          </button>
+    </form>
+</div>
+</section>
+<script>
+//           function addItem() {
+//               const inputs = document.getElementsByTagName("input");
+//             //   let boo = {
+//             //       product_name: inputs[0].value,
+//             //       price: inputs[1].value,
+//             //       brand: inputs[2].value,
+//             //       picture: inputs[3].value
+//             //     };
+                
+//             //     console.log(boo);
+//                 fetch("http://127.0.0.1:5000/add-new-record/", {
+//                     method: "POST",
+//                     body: JSON.stringify({
+//                         product_name: inputs[0].value,
+//                         price: inputs[1].value,
+//                         brand: inputs[2].value,
+//                         picture: inputs[3].value
+//                     }),
+//                     headers: {
+//                         "Content-type": "application/json; charset=UTF-8",
+//                     },
+//                 })
+//                 .then((response) => response.json())
+//                 .then((json) => {
+//                     console.log(json);
+//                     alert("Item has been added and Created");
+//                     document.getElementById("create-form").reset();
+//     });
+// }
+
+</script>
+<script src="assets/scripts/add-item.js"></script>
+</body>
+</html>
