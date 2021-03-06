@@ -61,6 +61,8 @@ header {
   padding: 20px;
   overflow: auto;
   font-size: x-large;
+  margin-top: -60vh;
+  height: 80vh;
 }
 
 /* Style the list inside the menu */
@@ -70,7 +72,7 @@ header {
 }
 .items-scroll {
   background-color: whitesmoke;
-  width: 100%;
+  width: 70%;
   height: 60vh;
   overflow: auto;
 }
@@ -305,6 +307,10 @@ font-size: 18px;*/
 .product-card .add-to-cartBtn:hover {
   opacity: 0.7;
 }
+.logo {
+  height: 8vh;
+  width: 8vw;
+}
 /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
 @media (max-width: 600px) {
   .reciept,
@@ -312,6 +318,12 @@ font-size: 18px;*/
   .control-panel {
     width: 100%;
     /*height: auto;*/
+  }
+  .reciept {
+    margin-top: 0;
+  }
+  .items-scroll {
+    width: 100%;
   }
   #li-items {
     display: list-item;

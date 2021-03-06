@@ -9,21 +9,31 @@
 // }
 
 function info(showhide, id) {
-  if (showhide == "show") {
-    document.getElementById("infobox").style.visibility = "visible";
+  let isVisible = document.getElementById("infobox").style.visibility;
+  console.log(isVisible);
 
-    itemInfo(id);
-  } else if (showhide == "hide") {
-    document.getElementById("infobox").style.visibility = "hidden";
-    document.getElementById("infobox").innerHTML = "";
-  }
+  isVisible == "visible"
+    ? ((document.getElementById("infobox").style.visibility = "hidden"),
+      (document.getElementById("infobox").innerHTML = ""))
+    : ((document.getElementById("infobox").style.visibility = "visible"),
+      (document.getElementById("infobox").innerHTML = itemInfo(id)));
+  // if (showhide == "show") {
+  //   document.getElementById("infobox").style.visibility = "visible";
+
+  //   itemInfo(id);
+  // } else if (showhide == "hide") {
+  //   document.getElementById("infobox").style.visibility = "hidden";
+  //   document.getElementById("infobox").innerHTML = "";
+  // }
 }
 
 function itemInfo(id) {
   let cart = document.getElementById("infobox");
+  console.log(id);
   let block = products.filter((product) => {
     return product.id == id;
   });
+  console.log(products, block);
   let selectedItem = block[0];
   let cartItem = `
         <p class="rec-li" id="infoproduct${id}" product-price=${selectedItem.price}>
@@ -34,6 +44,6 @@ function itemInfo(id) {
           <p>Price:R${selectedItem.price}</p>
         <button onclick="info('hide')">Close</button>
       `;
-  cart.innerHTML = cartItem;
   console.log(products);
+  return cartItem;
 }
