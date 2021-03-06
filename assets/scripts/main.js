@@ -18,17 +18,13 @@ function getPosts() {
 
 function createsaleItem(product) {
   const listitem = `<li>
-    <div class="product-container" >
-              <img src="${product.picture}" class="li-image" />
-              <p id='product_name' class="item-name"><h3>${product.product_name}</h3></p>
-              <div class="icon-overlay">
-               <button class="info-btn"  onclick="info('show', ${product.id});">Info</button>
-                <p id='product_price'>R${product.price}</p>
-                <button class="addtocart-btn" onclick="addToCart(${product.id})">Buy &#43</button>
-                
-              </div>
-              
-            </div></li>`;
+  <div class="product-card">
+  <img src="${product.picture}" class="li-image">
+  <h1>${product.product_name}</h1>
+  <p class="price">R${product.price}</p>
+  <button onclick="info('show', ${product.id});" ><i class="fas fa-info"></i></button>
+  <p><button class="add-to-cartBtn" onclick="addToCart(${product.id})">Add to Cart</button></p>
+</div></li>`;
   let list = document.getElementById("li-items");
   console.log("Hello");
   list.innerHTML += listitem;
@@ -83,21 +79,21 @@ function addToCart(id) {
     let alpha = `${parseInt(total) + parseInt(x)}`;
 
     if (total <= 0) {
-      alert("Something went Wrong");
+      alert("Something went Wrong ,Reload Page");
     }
 
     recieptTotal.innerHTML = total;
     console.log(total);
   }
-  function checkOut() {
-    let a = document.getElementsByClassName("total-price").innerHTML;
-    console.log(a);
-    console.log(
-      parseInt(document.getElementsByClassName("total-price").innerHTML)
-    );
-    alert("Your total is", total);
-  }
   calcTotal();
+}
+function checkOut() {
+  let total = document.getElementsByClassName("total-price")[0].innerHTML;
+  alert(`Your total is R${total}`);
+  document.getElementsByClassName("total-price")[0].innerHTML = "0";
+  let clear = "";
+  let rec = document.getElementById("cartList");
+  rec.innerHTML = clear;
 }
 
 function admin() {

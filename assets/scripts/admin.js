@@ -14,7 +14,7 @@ function getPosts() {
 function createtr(product) {
   const tableitem = ` <tr data-id=${product.id}>
                 <td>${product.id}</td>
-                // <td><input name="product_name" type='text' value="${product.product_name}" ></td>
+                <td><input name="product_name" type='text' value="${product.product_name}" ></td>
                 <td><input name="price" type='text' value="${product.price}" placeholder="Currently:R${product.price}"></td>
                 <td><input name="brand" type='text' value="${product.brand}"></td>
                 <td><input name="picture" type='text' value="${product.picture}"></td>

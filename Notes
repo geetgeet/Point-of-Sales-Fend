@@ -1,2 +1,18 @@
 https://admiring-minsky-04b5fe.netlify.app/
 https://shielded-woodland-34724.herokuapp.com/
+
+
+
+
+
+<div class="product-container" >
+              <img src="${product.picture}" class="li-image" />
+              <p id='product_name' class="item-name"><h3>${product.product_name}</h3></p>
+              <div class="icon-overlay">
+               <button class="info-btn"  onclick="info('show', ${product.id});">Info</button>
+                <p id='product_price'>R${product.price}</p>
+                <button class="addtocart-btn" onclick="addToCart(${product.id})">Buy &#43</button>
+                
+              </div>
+              
+            </div>

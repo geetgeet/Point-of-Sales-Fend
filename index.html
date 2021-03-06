@@ -77,6 +77,18 @@
         <div>
           <ul class="items-scroll" id="li-items">
             <!-- <li>
+              <div class="product-container" >
+                        <img src="${product.picture}" class="li-image" />
+                        <p id='product_name' class="item-name"><h3>${product.product_name}</h3></p>
+                        <div class="icon-overlay">
+                         <button class="info-btn"  onclick="info('show', ${product.id});">Info</button>
+                          <p id='product_price'>R${product.price}</p>
+                          <button class="addtocart-btn" onclick="addToCart(${product.id})">Buy &#43</button>
+                          
+                        </div>
+                        
+                      </div></li> -->
+            <!-- <li>
               <li>
                 <div class="product-container" >
                           <img src="${product.picture}" class="li-image" />
@@ -155,7 +167,7 @@
             </h3>
           </div>
           <ul class="reciept-items" id="cartList">
-            <li class="reciept-item">N/A</li>
+            <!-- <li class="reciept-item">N/A</li>
             <li
               class="rec-li"
               id="product${id}"
@@ -165,7 +177,7 @@
             >
               ${ selectedItem.product_name } : ${ selectedItem.price }
               <button onclick="removefromCart()">Remove</button>
-            </li>
+            </li> -->
           </ul>
         </div>
         <div class="control-panel">
@@ -174,6 +186,15 @@
           <button class="admin-btn" value="ADMIN">
             <a href="javascript:login('show');">Admin-login</a>
           </button>
+          <div class="searchButtons">
+            <h2 class="headings">Search By Brand</h2>
+            <button class="btn-check-out" onclick="searchBrand('Bob')">
+              Bob
+            </button>
+            <button class="btn-check-out" onclick="searchBrand('Handy')">
+              Handy
+            </button>
+          </div>
         </div>
       </div>
     </section>
@@ -183,6 +204,10 @@
 
     <script src="./assets/scripts/main.js"></script>
     <script src="./assets/scripts/checkout.js"></script>
+    <script
+      src="https://kit.fontawesome.com/dbc9fe0c4c.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
 <script>
