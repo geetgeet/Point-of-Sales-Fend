@@ -20,7 +20,7 @@ function createsaleItem(product) {
   const listitem = `<li>
   <div class="product-card">
   <img src="${product.picture}" class="li-image">
-  <h1>${product.product_name}</h1>
+  <h1 class="itemName">${product.product_name}</h1>
   <p class="price">R${product.price}</p>
   <button onclick="info('show', ${product.id});" ><i class="fas fa-info"></i></button>
   <p><button class="add-to-cartBtn" onclick="addToCart(${product.id})">Add to Cart</button></p>
