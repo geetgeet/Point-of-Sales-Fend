@@ -220,6 +220,8 @@ font-size: 18px;*/
   visibility: hidden;
   display: flex;
   flex-direction: column;
+  padding: 3%;
+  text-align: center;
 }
 #logForm {
   text-align: center;
@@ -358,5 +360,8 @@ font-size: 18px;*/
   }
   #logForm {
     padding: 5px;
+  }
+  .head-search {
+    display: block;
   }
 }
