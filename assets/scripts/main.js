@@ -75,8 +75,8 @@ function addToCart(id) {
     let x = document
       .getElementById("product" + id)
       .getAttribute("product-price");
+
     let total = parseInt(y) + parseInt(x);
-    let alpha = `${parseInt(total) + parseInt(x)}`;
 
     if (total <= 0) {
       alert("Something went Wrong ,Reload Page");
@@ -89,7 +89,7 @@ function addToCart(id) {
 }
 function checkOut() {
   let total = document.getElementsByClassName("total-price")[0].innerHTML;
-  alert(`Your total is R${total}`);
+  alert(`Thank You For Purchasing,Your total is R${total}`);
   document.getElementsByClassName("total-price")[0].innerHTML = "0";
   let clear = "";
   let rec = document.getElementById("cartList");

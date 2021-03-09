@@ -37,7 +37,7 @@ function itemInfo(id) {
   let selectedItem = block[0];
   let cartItem = `
         <p class="rec-li" id="infoproduct${id}" product-price=${selectedItem.price}>
-          ${selectedItem.product_name} : ${selectedItem.price}</p>
+         <p> ${selectedItem.product_name} : ${selectedItem.price}</p>
 
           <p>Item Name:${selectedItem.product_name}</p>
           <p>Brand:${selectedItem.brand}</p>

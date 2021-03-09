@@ -16,3 +16,32 @@ https://shielded-woodland-34724.herokuapp.com/
               </div>
               
             </div>
+
+
+function searchProducts() {
+  // Get data from form
+  let form = document.getElementById("search-form");
+  let searchTerm = form.getElementsByTagName("input")[0].value;
+  // Create Regular Expression
+  let searchRegEx = new RegExp(searchTerm, "i");
+  // Fetch data to search from
+  fetch("http://127.0.0.1:5000/show-records/")
+    .then((response) => response.json())
+    .then((json) => {
+      console.log(json);
+      let result = json.filter((product) => {
+        return product.product_name.search(searchRegEx) !== -1;
+      });
+      if (result.length > 0) {
+        alert("there are found items");
+        console.log(result);
+      } else {
+        alert("nothing found");
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+
+  console.log(searchRegEx);
+}

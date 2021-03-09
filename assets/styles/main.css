@@ -18,6 +18,15 @@ body {
   width: 18%;
   list-style-type: none;
 }
+
+.items-scroll li {
+  width: 25%;
+  min-width: 300px;
+}
+
+.items-scroll img {
+  object-fit: cover;
+}
 .items-scroll #items {
   overflow: auto;
   overflow-y: scroll;
@@ -38,7 +47,6 @@ html {
 }
 
 body {
-  font-family: "Varela Round", sans-serif;
   /* font-family: 'Pacifico', cursive; */
   font-family: "Do Hyeon", sans-serif;
 }
@@ -77,9 +85,10 @@ header {
   overflow: auto;
 }
 #li-items {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
+  display: flex;
   list-style-type: none;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 .items-scroll #items ul {
   height: 200px;
@@ -95,7 +104,7 @@ header {
   padding: 20px;
   width: 70%;
   background-color: #f1f1f1;
-  /* height: 30vh; only for demonstration, should be removed */
+  height: 25vh;
 }
 
 /* Clear floats after the columns */
@@ -221,6 +230,7 @@ font-size: 18px;*/
 .reciept-head {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .reciept .total-price {
   overflow: auto;
@@ -245,6 +255,8 @@ font-size: 18px;*/
   visibility: hidden;
   display: flex;
   flex-direction: column;
+  padding: 3%;
+  text-align: center;
 }
 .addtocart-btn {
   position: absolute;
@@ -273,7 +285,7 @@ font-size: 18px;*/
   font-family: "Varela Round", sans-serif;
 }
 .searchButtons {
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   float: right;
 }
@@ -310,6 +322,16 @@ font-size: 18px;*/
 .logo {
   height: 8vh;
   width: 8vw;
+  object-fit: contain;
+}
+.head-search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Do Hyeon", sans-serif;
+}
+.headings {
+  font-family: "Do Hyeon", sans-serif;
 }
 
 /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
