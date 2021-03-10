@@ -8,7 +8,7 @@ function addItem() {
   //     };
 
   //     console.log(boo);
-  fetch("http://127.0.0.1:5000/add-new-record/", {
+  fetch("https://shielded-woodland-34724.herokuapp.com/add-new-record/", {
     method: "POST",
     body: JSON.stringify({
       product_name: inputs[0].value,

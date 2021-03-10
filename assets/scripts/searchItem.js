@@ -5,7 +5,7 @@ function searchProducts() {
   // Create Regular Expression
   let searchRegEx = new RegExp(searchTerm, "i");
   // Fetch data to search from
-  fetch("http://127.0.0.1:5000/show-records/")
+  fetch("https://shielded-woodland-34724.herokuapp.com/show-records/")
     .then((response) => response.json())
     .then((json) => {
       // Filter data

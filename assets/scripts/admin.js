@@ -3,7 +3,7 @@ function getPosts() {
   // Get element to change
 
   // Fetch the data
-  fetch("http://127.0.0.1:5000/show-records/")
+  fetch("https://shielded-woodland-34724.herokuapp.com/show-records/")
     .then((response) => response.json())
     .then((json) => {
       console.log(json);
@@ -31,7 +31,9 @@ function admin() {}
 
 function deleteValues(id) {
   if (confirm("Are you sure you want to DELETE item from database?")) {
-    fetch(`http://127.0.0.1:5000/delete-item/${id}/`, { method: "DELETE" });
+    fetch(`https://shielded-woodland-34724.herokuapp.com/delete-item/${id}/`, {
+      method: "DELETE",
+    });
     console.log(id);
   } else {
     alert("Delete Cancelled");
@@ -56,7 +58,7 @@ function editValues(id) {
       picture: inputs[3].value,
     };
 
-    fetch(`http://127.0.0.1:5000/edit-item/${id}/`, {
+    fetch(`https://shielded-woodland-34724.herokuapp.com/edit-item/${id}/`, {
       method: "PUT",
       body: JSON.stringify(product),
       headers: {
