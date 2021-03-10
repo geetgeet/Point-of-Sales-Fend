@@ -364,4 +364,10 @@ font-size: 18px;*/
   .head-search {
     display: block;
   }
+  .control-panel {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
 }
