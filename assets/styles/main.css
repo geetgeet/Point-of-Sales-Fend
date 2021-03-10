@@ -386,6 +386,7 @@ font-size: 18px;*/
     height: inherit;
     width: inherit;
     justify-content: center;
+    border-radius: 10px;
   }
   #logForm {
     padding: 5px;
