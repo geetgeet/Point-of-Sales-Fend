@@ -37,8 +37,6 @@ function deleteValues(id) {
     console.log(id);
   } else {
     alert("Delete Cancelled");
-
-    console.log("Thing was not saved to the database.");
   }
 
   // let item = document.querySelector(`[data-id="${ id }"]`);

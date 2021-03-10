@@ -259,6 +259,8 @@ font-size: 18px;*/
   flex-direction: column;
   padding: 3%;
   text-align: center;
+  border-radius: 10px;
+  font-family: "Varela Round", sans-serif;
 }
 .addtocart-btn {
   position: absolute;
