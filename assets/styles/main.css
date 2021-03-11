@@ -247,8 +247,7 @@ font-size: 18px;*/
   margin-left: 40%;
   margin-right: 40%;
   margin-top: 50px;
-  padding-top: 10px;
-  width: 20%;
+  /* padding-top: 10px; */
   /* height: 150px; */
   position: absolute;
   background: #fbfbf0;
@@ -262,6 +261,7 @@ font-size: 18px;*/
   text-align: center;
   border-radius: 10px;
   font-family: "Varela Round", sans-serif;
+  padding: 15px;
 }
 .addtocart-btn {
   position: absolute;
@@ -328,6 +328,15 @@ font-size: 18px;*/
   height: 8vh;
   width: 8vw;
   object-fit: contain;
+  /* width: 100px;
+  height: 100px; */
+  transition: width 2s, height 2s, transform 1s;
+}
+
+.logo:hover {
+  height: 8vh;
+  width: 8vw;
+  transform: rotate(360deg);
 }
 .head-search {
   display: flex;
@@ -388,6 +397,7 @@ font-size: 18px;*/
     width: inherit;
     justify-content: center;
     border-radius: 10px;
+    margin-left: 20%;
   }
   #logForm {
     padding: 5px;
