@@ -222,6 +222,7 @@ font-size: 18px;*/
   flex-direction: column;
   padding: 3%;
   text-align: center;
+  border-radius: 10px;
 }
 #logForm {
   text-align: center;
@@ -340,7 +341,7 @@ font-size: 18px;*/
 .recCheck {
   display: inline-block;
   padding: 10px 20px;
-  font-size: 22px;
+  font-size: 20px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
