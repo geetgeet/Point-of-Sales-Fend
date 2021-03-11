@@ -53,7 +53,7 @@ html {
     overflow: hidden;
     position: fixed;
     top: 40px;
-    background: black;
+    background: transparent;
     left: 0;
     justify-content: center;
     height: 40px;
