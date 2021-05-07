@@ -389,9 +389,9 @@ font-size: 18px;*/
   .items-scroll {
     width: 100%;
   }
-  #li-items {
+  /* #li-items {
     display: list-item;
-  }
+  } */
   #popupbox {
     height: inherit;
     width: inherit;
