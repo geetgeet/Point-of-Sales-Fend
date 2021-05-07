@@ -78,12 +78,15 @@ function addToCart(id) {
 
     let total = parseInt(y) + parseInt(x);
 
-    if (total <= 0) {
+    if ( isNaN(total)) {
       alert("Something went Wrong ,Reload Page");
+      window.location.reload()
     }
 
     recieptTotal.innerHTML = total;
     console.log(total);
+    console.log(typeof total);
+    
   }
   calcTotal();
 }

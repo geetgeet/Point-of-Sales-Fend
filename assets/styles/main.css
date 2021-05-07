@@ -2,7 +2,8 @@ html {
   height: 100vh;
 }
 body {
-  background-color: teal;
+  /* background-color: teal; */
+  background-color: #7EA8BE;
 }
 .landing {
   max-height: 100vh;
