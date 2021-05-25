@@ -21,7 +21,7 @@ function searchBrand(brand) {
   <img src="${product.picture}" class="li-image">
   <h1>${product.product_name}</h1>
   <p class="price">R${product.price}</p>
-  <p class="stock">R${product.stock}</p>
+  <p class="stock">R${product.stocks}</p>
   <button onclick="info('show', ${product.id});" ><i class="fas fa-info"></i></button>
   <p><button class="add-to-cartBtn" onclick="addToCart(${product.id})">Add to Cart</button></p>
 </div></li>`;
