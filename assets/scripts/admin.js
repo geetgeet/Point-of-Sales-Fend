@@ -15,7 +15,7 @@ function createtr(product) {
   const tableitem = ` <tr data-id=${product.id}>
                 <td>${product.id}</td>
                 <td><input name="product_name" type='text' value="${product.product_name}" ></td>
-                <td><input name="stock" type='text' value="${product.stock}" placeholder="Ava Stock:${product.stock}"></td>
+                <td><input name="stocks" type='text' value="${product.stocks}" placeholder="Ava Stock:${product.stock}"></td>
                 <td><input name="price" type='text' value="${product.price}"></td>
                 <td><input name="brand" type='text' value="${product.brand}"></td>
                 <td><input name="picture" type='text' value="${product.picture}"></td>
@@ -52,7 +52,7 @@ function editValues(id) {
 
     let product = {
       product_name: inputs[0].value,
-      stock: inputs[1].value,
+      stocks: inputs[1].value,
       price: inputs[2].value,
       brand: inputs[3].value,
       picture: inputs[4].value,

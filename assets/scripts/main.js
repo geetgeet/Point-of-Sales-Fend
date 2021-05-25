@@ -68,7 +68,7 @@ function addToCart(id) {
       <button onclick="removefromCart(${id})">Remove</button></li>
     `;
   cart.innerHTML += cartItem;
-  products.stock-1
+  products.stocks-1
   console.log(products);
 
   function calcTotal() {
