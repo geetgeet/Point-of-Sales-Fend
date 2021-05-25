@@ -16,6 +16,7 @@ function createtr(product) {
                 <td>${product.id}</td>
                 <td><input name="product_name" type='text' value="${product.product_name}" ></td>
                 <td><input name="stock" type='text' value="${product.stock}" placeholder="Ava Stock:${product.stock}"></td>
+                <td><input name="price" type='text' value="${product.price}"></td>
                 <td><input name="brand" type='text' value="${product.brand}"></td>
                 <td><input name="picture" type='text' value="${product.picture}"></td>
                 <td><button type="button" onclick="deleteValues(${product.id})">Delete</button> </td>
