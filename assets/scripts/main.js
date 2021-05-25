@@ -22,7 +22,7 @@ function createsaleItem(product) {
   <img src="${product.picture}" class="li-image">
   <h1 class="itemName">${product.product_name}</h1>
   <p class="price">R${product.price}</p>
-  <p class="stock">Ava:${product.stocks}</p>
+  <p class="stock">Qty ava:${product.stocks}</p>
   <button onclick="info('show', ${product.id});" ><i class="fas fa-info"></i></button>
   <p><button class="add-to-cartBtn" onclick="addToCart(${product.id})">Add to Cart</button></p>
 </div></li>`;
