@@ -41,6 +41,7 @@ function itemInfo(id) {
 
           <p>Item Name:${selectedItem.product_name}</p>
           <p>Brand:${selectedItem.brand}</p>
+          <p>Stock:${selectedItem.stock}</p>
           <p>Price:R${selectedItem.price}</p>
         <button onclick="info('hide')">Close</button>
       `;

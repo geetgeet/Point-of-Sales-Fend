@@ -22,6 +22,7 @@ function createsaleItem(product) {
   <img src="${product.picture}" class="li-image">
   <h1 class="itemName">${product.product_name}</h1>
   <p class="price">R${product.price}</p>
+  <p class="stock">Ava:${product.stock}</p>
   <button onclick="info('show', ${product.id});" ><i class="fas fa-info"></i></button>
   <p><button class="add-to-cartBtn" onclick="addToCart(${product.id})">Add to Cart</button></p>
 </div></li>`;
@@ -67,6 +68,7 @@ function addToCart(id) {
       <button onclick="removefromCart(${id})">Remove</button></li>
     `;
   cart.innerHTML += cartItem;
+  products.stock-1
   console.log(products);
 
   function calcTotal() {
