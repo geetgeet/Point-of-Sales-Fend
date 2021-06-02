@@ -5,7 +5,7 @@ function getPosts() {
   let list = document.getElementById("li-items");
 
   // Fetch the data
-  fetch("http://127.0.0.1:5000/")
+  fetch("https://shielded-woodland-34724.herokuapp.com/show-records/")
     .then((response) => response.json())
     .then((json) => {
       console.log(json);
